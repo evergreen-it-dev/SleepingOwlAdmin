@@ -37,6 +37,8 @@ class ModelRouter
     public function register(ModelCollection $models)
     {
         $aliases = $models->keyByAlias();
+        
+        //dd($aliases);
 
         if ($aliases->count() > 0) {
             $this->registerModelPatterns($aliases);
